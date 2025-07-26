@@ -1,3 +1,5 @@
+"use strict";
+
 const isSquare = () => true;
 const isRectangle = () => true;
 const isQuadrilateral = () => true;
