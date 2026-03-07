@@ -13,8 +13,8 @@ class Cache {
 
     // Run an expensive computation - find 100,000,000 Fibonacci numbers
     const result = [0, 1];
-    for (let i = 2; i < 100_000_000; i++) {
-      result.push(result[i - 2] + result[i - 1])
+    while (result.length < 100_000_000) {
+      result.push(result.at(-1) + result.at(-2));
     }
     return Cache.#expensiveResult = result;
   }
@@ -23,10 +23,12 @@ class Cache {
 let start = Date.now();
 const resource = Cache.expensiveResult;
 console.log(`Got ${resource.length} numbers in ${Date.now() - start}ms`);
+// example output: Got 100000000 numbers in 2574ms
 
 start = Date.now();
 const cached = Cache.expensiveResult;
 console.log(`Got ${cached.length} numbers in ${Date.now() - start}ms`);
+// expected output: Got 100000000 numbers in 0ms
 
 // It should be returning the cached response, not a new object.
 console.assert(resource === cached);
