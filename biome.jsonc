@@ -1,0 +1,89 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.6/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "master"
+  },
+  "files": {
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 80
+  },
+  "linter": {
+    "enabled": true,
+    "includes": [
+      "src/**/*.mjs",
+      "src/**/*.ts",
+      "src/**/*.html"
+    ],
+    "domains": {
+      // Biome thinks some of my code is in this language, for some reason.
+      "qwik": "none"
+    },
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        // To demonstrate `arguments` in example code
+        "noArguments": "off",
+        // Contrived example classes are contrived
+        "noStaticOnlyClass": "off",
+        // Some examples show that something works for both kinds of function
+        "useArrowFunction": "off"
+      },
+      "correctness": {
+        // Using unicode escapes in identifiers outsmarts Biome lol
+        "noUndeclaredVariables": "off",
+        // There are empty functions to demonstrate Function.prototype.length
+        "noUnusedFunctionParameters": "off",
+        // Example classes
+        "noUnusedPrivateClassMembers": "off",
+        // Lots of example code has these
+        "noUnusedVariables": "off"
+      },
+      "performance": "on",
+      "security": "on",
+      "style": {
+        // To make example code more compact
+        "useBlockStatements": "off",
+        // Personal preference
+        "useTemplate": "off"
+      },
+      "suspicious": {
+        // Personal preference
+        "noAssignInExpressions": "off",
+        // There's an example which deliberately abuses JS switch statements
+        "noDuplicateCase": "off",
+        // To make example code more compact
+        "noFallthroughSwitchClause": "off",
+        // Example code contains "use strict" just to make it 100% clear that
+        // the code will work in strict mode
+        "noRedundantUseStrict": "off",
+        // To show an alternate way to check for NaN
+        "noSelfCompare": "off",
+        // To demonstrate the fact that you can do this
+        "noShadowRestrictedNames": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
+  },
+  "assist": {
+    "enabled": false,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

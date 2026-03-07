@@ -7,6 +7,9 @@
   "author": "Aidan Garvey <aidangarvey@pm.me>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "lint": "biome lint"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.4.6",
     "typescript": "^5.9.3"
