@@ -2,14 +2,12 @@
 
 function myNumber(value) {
   if (arguments.length === 0)
-    return 0
-  switch (value) {
-    case undefined:
-      return NaN;
-    case null:
-      return 0;
-    // ...
-  }
+    return 0;
+  else if (value === undefined)
+    return NaN;
+  else if (value === null)
+    return 0;
+  // ...
 }
 
 console.log(myNumber()); // 0
