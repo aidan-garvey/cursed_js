@@ -1,0 +1,14 @@
+{
+  "name": "cursed_js",
+  "version": "1.0.0",
+  "description": "Example code for wacky JavaScript features",
+  "main": "index.js",
+  "repository": "https://github.com/aidan-garvey/cursed_js.git",
+  "author": "Aidan Garvey <aidangarvey@pm.me>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.6",
+    "typescript": "^5.9.3"
+  }
+}
