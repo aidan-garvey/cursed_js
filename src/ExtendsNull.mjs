@@ -55,6 +55,22 @@ try {
 {
   class NullPrototype extends null {
     field = 0
+
+    constructor() {}
+  }
+
+  try {
+    new NullPrototype()
+  } catch (err) {
+    // ReferenceError: Must call super constructor in derived class before
+    // accessing 'this' or returning from derived constructor
+    console.log(err)
+  }
+}
+
+{
+  class NullPrototype extends null {
+    field = 0
   }
 
   try {
