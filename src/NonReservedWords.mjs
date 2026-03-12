@@ -16,10 +16,14 @@
   }
 }
 
+// MDN states that 'await' is not a reserved word in non-async functions, but
+// this example only executes in Chrome and Firefox, not NodeJS!
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords
+/*
 class async {
   // A synchronous getter called "async"
   get async() {
-    // In non-async methods, "await" is not a reserved word
     const await = 0
   }
 }
+*/

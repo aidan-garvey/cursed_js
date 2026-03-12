@@ -32,11 +32,17 @@
         "noArguments": "off",
         // Contrived example classes are contrived
         "noStaticOnlyClass": "off",
-        // Some examples show that something works for both kinds of function
+        // Needed for ExtendsObject
+        "noUselessConstructor": "off",
+        // Some examples require `function`, e.g. for `arguments`
         "useArrowFunction": "off"
       },
       "correctness": {
-        // Using unicode escapes in identifiers outsmarts Biome lol
+        // To demonstrate "correct" usage of `extends null`
+        "noConstructorReturn": "off",
+        // To show one of the ways that `extends null` _doesn't_ work
+        "noInvalidConstructorSuper": "off",
+        // To demonstrate ReferenceError being thrown for undeclared identifiers
         "noUndeclaredVariables": "off",
         // There are empty functions to demonstrate Function.prototype.length
         "noUnusedFunctionParameters": "off",
@@ -48,13 +54,13 @@
       "performance": "on",
       "security": "on",
       "style": {
-        // To make example code more compact
+        // To make example code more compact, also personal preference
         "useBlockStatements": "off",
         // Personal preference
         "useTemplate": "off"
       },
       "suspicious": {
-        // Personal preference
+        // Personal preference (but also to make Switch.mjs even more gross)
         "noAssignInExpressions": "off",
         // There's an example which deliberately abuses JS switch statements
         "noDuplicateCase": "off",
