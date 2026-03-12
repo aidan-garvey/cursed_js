@@ -1,13 +1,13 @@
 {
   // async only has special meaning in very specific contexts, it is a keyword
   // but not a reserved word
-  const async = 0
+  const async = 0;
 }
 
 {
   const async = async () => {
     // ...
-  }
+  };
 }
 
 {
