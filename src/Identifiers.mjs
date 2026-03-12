@@ -9,7 +9,7 @@ catch (err) {
   console.error(err.message); // undeclaredVariable is not defined
 }
 
-const variabl\u{65} = 1
+const variabl\u{65} = 1;
 console.log(variable); // 1
 
 const \u0068\u0065\u006C\u006C\u006F = 2;
